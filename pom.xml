@@ -18,10 +18,13 @@
         <module>atm-runtime</module>
         <module>atm-port</module>
         <module>atm-model</module>
+        <module>atm-repository</module>
+        <module>atm-repository-fake</module>
     </modules>
 
     <properties>
         <springboot.value>2.1.7.RELEASE</springboot.value>
+        <h2.value>1.4.199</h2.value>
     </properties>
 
     <dependencyManagement>
@@ -40,14 +43,17 @@
             </dependency>
 
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${springboot.value}</version>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <scope>runtime</scope>
+                <version>${h2.version}</version>
             </dependency>
+
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
+                <version>${springboot.value}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>

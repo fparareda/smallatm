@@ -4,7 +4,7 @@ public class Account {
 
     private String id;
     private Currency currency;
-    private User user;
+    private double balance;
 
     public String getId() {
         return id;
@@ -14,14 +14,14 @@ public class Account {
         return currency;
     }
 
-    public User getUser() {
-        return user;
+    public double getBalance() {
+        return balance;
     }
 
     public static final class AccountBuilder {
         private String id;
         private Currency currency;
-        private User user;
+        private double balance;
 
         private AccountBuilder() {
         }
@@ -40,16 +40,16 @@ public class Account {
             return this;
         }
 
-        public AccountBuilder withUser(User user) {
-            this.user = user;
+        public AccountBuilder withBalance(double amount) {
+            this.balance = amount;
             return this;
         }
 
         public Account build() {
             Account account = new Account();
             account.id = this.id;
-            account.user = this.user;
             account.currency = this.currency;
+            account.balance = this.balance;
             return account;
         }
     }
