@@ -12,4 +12,14 @@ public enum Currency {
         this.symbol = symbol;
         this.name = name;
     }
+
+    public static Currency valueOfName(String name) {
+        for (Currency currency : values()) {
+            if (currency.name.equals(name)) {
+                return currency;
+            }
+        }
+        return null;
+    }
+
 }
