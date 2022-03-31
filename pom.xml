@@ -23,7 +23,7 @@
     </modules>
 
     <properties>
-        <springboot.value>2.1.7.RELEASE</springboot.value>
+        <springboot.value>2.5.12</springboot.value>
         <h2.value>1.4.199</h2.value>
     </properties>
 
